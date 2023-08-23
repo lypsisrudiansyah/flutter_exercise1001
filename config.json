@@ -1,6 +1,14 @@
 {
-    "modules": [],
-    "module_directory_name": "module",
+    "modules": [
+        "login",
+        "employee/employee_dashboard",
+        "employee/employee_order",
+        "employee/employee_profile",
+        "hr/hr_dashboard",
+        "hr/hr_order",
+        "hr/hr_profile"
+    ],
+    "module_directory_name": "presentation",
     "experimental_mode": false,
     "learning_mode": false,
     "unfreezed": true,

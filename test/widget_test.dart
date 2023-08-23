@@ -3,8 +3,7 @@
 import 'package:dio/dio.dart';
 import 'dart:io';
 
-// ignore: avoid_relative_lib_imports
-import '../lib/user.dart';
+import 'package:flutter_basic_widget_exercise/user.dart';
 
 void main() async {
   if (fullName.isEmpty || email.isEmpty || whatsapp.isEmpty) {
