@@ -37,8 +37,7 @@ class Get {
     return MediaQuery.of(currentContext).size.width;
   }
 
-  static ValueNotifier<ThemeData> mainTheme =
-      ValueNotifier<ThemeData>(ThemeData());
+  static ValueNotifier<ThemeData> mainTheme = ValueNotifier<ThemeData>(ThemeData());
   static changeTheme(ThemeData theme) {
     mainTheme.value = theme;
   }
