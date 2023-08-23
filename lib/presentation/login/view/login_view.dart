@@ -19,7 +19,6 @@ class LoginView extends StatefulWidget {
           child: Column(
             children: [
               TextFormField(
-                initialValue: 'admin@gmail.com',
                 maxLength: 20,
                 decoration: const InputDecoration(
                   labelText: 'Email',
@@ -36,11 +35,12 @@ class LoginView extends StatefulWidget {
                   ),
                   helperText: 'Enter your email address',
                 ),
-                onChanged: (value) {},
+                onChanged: (value) {
+                  controller.email = value;
+                },
               ),
               const SizedBox(height: 20.0),
               TextFormField(
-                initialValue: '123456',
                 maxLength: 20,
                 obscureText: true,
                 decoration: const InputDecoration(
@@ -58,7 +58,10 @@ class LoginView extends StatefulWidget {
                   ),
                   helperText: 'Enter your password',
                 ),
-                onChanged: (value) {},
+                onChanged: (value) {
+                  controller.password = value;
+
+                },
               ),
               const SizedBox(height: 20.0),
               ElevatedButton.icon(
@@ -71,7 +74,7 @@ class LoginView extends StatefulWidget {
                     horizontal: 50.0,
                   ),
                 ),
-                onPressed: () {},
+                onPressed: () => controller.doLogin(),
               ),
             ],
           ),
