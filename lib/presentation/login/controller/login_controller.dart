@@ -24,12 +24,9 @@ class LoginController extends State<LoginView> {
   Future doLogin() async {
     print("Email: $email Password: $password");
     if (email == 'andre' && password == '123456') {
-      print("Andre");
-
       Get.to(const EmployeeDashboardView());
       return;
     } else if (email == 'melisa' && password == '123456') {
-      print("Melisa");
       Get.to(const HrDashboardView());
       return;
     } else {

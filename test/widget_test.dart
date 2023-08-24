@@ -13,7 +13,7 @@ void main() async {
     print("----------------");
     return;
   }
-  
+
   List<String> modules = [
     "lib\\presentation\\login\\view\\login_view.dart",
     "lib\\presentation\\login\\controller\\login_controller.dart",
@@ -44,13 +44,13 @@ void main() async {
     }
   }
 
-  var loginController =
-      File("lib\\presentation\\login\\controller\\login_controller.dart".fix);
+  var loginController = File("lib\\presentation\\login\\controller\\login_controller.dart".fix);
 
   if (loginController.existsSync()) {
     var controllerContent = loginController.readAsStringSync();
 
     if (controllerContent.contains("String email")) {
+      print('str email correct');
       point += 3;
     }
     if (controllerContent.contains("String password")) {
@@ -65,12 +65,11 @@ void main() async {
       point += 5;
     }
 
-    if (controllerContent.contains("HRDashboardView")) {
+    if (controllerContent.contains("HrDashboardView()")) {
       point += 5;
     }
   }
-  var loginView =
-      File("lib\\presentation\\login\\view\\login_loginView.dart".fix);
+  var loginView = File("lib\\presentation\\login\\view\\login_view.dart".fix);
   if (loginView.existsSync()) {
     var loginViewContent = loginView.readAsStringSync();
     if (loginViewContent.contains("controller.doLogin()")) {
