@@ -1,12 +1,7 @@
 {
     "modules": [
-        "login",
-        "employee/employee_dashboard",
-        "employee/employee_order",
-        "employee/employee_profile",
-        "hr/hr_dashboard",
-        "hr/hr_order",
-        "hr/hr_profile"
+        "employee/employee_main_navigation",
+        "hr/hr_main_navigation"
     ],
     "module_directory_name": "presentation",
     "experimental_mode": false,
